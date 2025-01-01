@@ -1,1 +1,1 @@
-*
+System.out.println("total subarrays: "+tsa);
