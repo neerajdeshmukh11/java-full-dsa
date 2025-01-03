@@ -1,1 +1,1 @@
-System.out.println("total subarrays: "+tsa);
+System.out.println("the maximum sum is: "+currSum);
