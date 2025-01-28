@@ -1,6 +1,6 @@
 public class Basics {
     public static void main(String[] args) {
-        Pen p1 = new Pen(); // p1 object
+        Pen p1 = new Pen(); // p1 object , Pen() is a constructor
         p1.setColor("blue");
         System.out.println(p1.color);
         p1.setTip(5);
@@ -37,5 +37,8 @@ class Pen {
     }
     void setTip(int tip){
         this.tip = tip;
+    }
+    Pen(){ // constructor ,, if not then default
+        System.out.println("Constructor called");
     }
 } 
