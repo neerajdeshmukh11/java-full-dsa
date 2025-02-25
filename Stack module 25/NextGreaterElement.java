@@ -1,6 +1,4 @@
-
 import java.util.Stack;
-
 public class NextGreaterElement {
 
     public static void NextGreater(int arr[], int nextGreater[]){
