@@ -1,3 +1,27 @@
 {
-    "java.debug.settings.onBuildFailureProceed": true
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.project.sourcePaths": [
+        "pratice questions",
+        "module11 adv star patterns",
+        "module 9",
+        "module 8",
+        "module 5",
+        "module 23 ArrayLIst",
+        "module 22 Backtracking",
+        "module 20 divide and conquer",
+        "module 19 recursion",
+        "module 17 bitmanipulation",
+        "module 16 Strings",
+        "module 14 2d arrays",
+        "module 13 sorting",
+        "module 12 arrays p1",
+        "module 10",
+        "linked list 1 module 24",
+        "leetcode array and string",
+        "hashmap.java",
+        "Stack module 25",
+        "Queue module 27",
+        "OOPS",
+        ""
+    ]
 }

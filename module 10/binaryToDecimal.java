@@ -1,4 +1,3 @@
-
 public class binaryToDecimal {
 
     public static void binaryToDec(int binaryNum) {
