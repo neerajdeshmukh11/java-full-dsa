@@ -28,7 +28,7 @@ public class inerleave2HalvesOfQueue {
 
         InterLeave(q);
         while(!q.isEmpty()){
-            System.out.print(q.remove());
+            System.out.print(q.remove()+" ");
         }
         System.out.println();
     }
