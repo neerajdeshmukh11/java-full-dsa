@@ -1,5 +1,4 @@
-public class PrintInRange {
-
+public class ValidateABST {
     static class Node{
         int data; 
         Node left,right;
@@ -10,6 +9,7 @@ public class PrintInRange {
             // this.right = null;
         }
     }
+
     public static Node Insert(Node root,int val){
         if(root == null){
             root = new Node(val);
@@ -30,29 +30,30 @@ public class PrintInRange {
         System.out.print(root.data+" ");
         Inorder(root.right);
     }
-    public static void InRange(Node root,int k1,int k2){
+    public static boolean Isvalid(Node root,Node min,Node max){
         if(root == null){
-            return;
+            return true;
         }
-        if(root.data>=k1 && root.data<=k2){
-            InRange(root.left, k1, k2);
-            System.out.println(root.data+" ");
-            InRange(root.right, k1, k2);
-        }else if (root.data<k1) {
-            InRange(root.left, k1, k2);
-        }else{
-            InRange(root.right, k1, k2);
+        if(min!=null&&root.data<=min.data){
+            return false;
         }
+        if(max!=null&&root.data>=max.data){
+            return false;
+        }
+        return Isvalid(root.left, min, root) && Isvalid(root.right, root, max);
     }
     public static void main(String[] args) {
-            int values[] = {8,5,3,1,4,6,10,11,14};
+        int values[] = {8,5,3,6,10,11,14};
             Node root = null;
             for(int i=0;i<values.length;i++){
                 root = Insert(root, values[i]);
             }
             Inorder(root);
             System.out.println();
-            int k1 = 5,k2 =12;
-            InRange(root, k1, k2);
+            if(Isvalid(root, null, null)){
+                System.out.println("valid");
+            }else{
+                System.out.println("invalid");
+            }
     }
 }
