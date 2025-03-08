@@ -193,9 +193,9 @@ public class MyLinkedList {
         ll.addFirst(1);
         ll.addLast(3);
         ll.addLast(4);
-        ll.print();
-        ll.add(2, 9);
-        ll.print();
+        // ll.print();
+        // ll.add(2, 9);
+        // ll.print();
         System.out.println("The size of my linkedlist is: " + ll.size);
         // ll.RemoveFirst();
         // ll.print();
@@ -206,7 +206,7 @@ public class MyLinkedList {
         // System.out.println(ll.recursiveSearch(10));
         // ll.reverse();
         // ll.print();
-        ll.deleteNthFromEnd(3);
+        // ll.deleteNthFromEnd(3);
         ll.print();
     }
 }
