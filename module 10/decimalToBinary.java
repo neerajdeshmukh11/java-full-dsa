@@ -16,5 +16,7 @@ public class decimalToBinary {
     }
     public static void main(String[] args) {
         decToBin(7);
+        int a = 3/2;
+        System.out.println(a);
     }
 }
