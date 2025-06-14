@@ -1,4 +1,4 @@
-import java.util.HashMap;
+import java.util.*;
 public class basicOperations {
     public static void main(String[] args) {
         HashMap<Integer,String> map = new HashMap<>();
@@ -27,5 +27,13 @@ public class basicOperations {
 
         // type 2
         map.forEach((key, value) -> System.out.println(key + ": " + value));
+
+        // type 3
+
+        Set<Integer> keys = map.keySet();
+
+        for (Integer k : keys) {
+            System.out.println("key = "+k+", value = "+map.get(k));
+        }
     }
 }
