@@ -1,7 +1,9 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 
-public class DFS {
-    
+public class Connected_comp_BFS {
+     
      static class Edge {
         int src;
         int dest;
@@ -41,25 +43,39 @@ public class DFS {
 
         graph[6].add(new Edge(6, 5, 1));
     }
+    public static void BFS(ArrayList<Edge> graph[]){
+        boolean visited[] = new boolean[graph.length];
 
-    public static void Depth_FS(ArrayList<Edge> graph[],int curr,boolean visited[]){ // O(V+E)
-        // visit
-        System.out.print(curr+" "); 
-        
-        visited[curr] = true;
-
-        for(int i=0;i<graph[curr].size();i++){
-            Edge e = graph[curr].get(i);
-            if(!visited[e.dest]){
-                Depth_FS(graph, e.dest, visited); 
+        for(int i=0;i<graph.length;i++){
+            if(!visited[i]){
+                Breadth_FS_Util(graph, visited);
             }
         }
+    }
+    public static void Breadth_FS_Util(ArrayList<Edge> graph[], boolean visited[]) { //O(V+E)
 
+        Queue<Integer> q = new LinkedList<>();
+
+        q.add(0);
+        while(!q.isEmpty()){
+            int curr = q.remove();
+
+            if(!visited[curr]){
+                System.out.print(curr+" ");
+
+                visited[curr] = true;
+
+                for(int i=0;i<graph[curr].size();i++){
+                    Edge e = graph[curr].get(i);
+                    q.add(e.dest);
+                }
+            }
+        }
     }
     public static void main(String[] args) {
         int V = 7;
         ArrayList<Edge>[] graph = new ArrayList[V];
         CreateGraph(graph);
-        Depth_FS(graph, 0, new boolean[V]);
+        BFS(graph);
     }
 }

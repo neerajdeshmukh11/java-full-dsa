@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 
-public class DFS {
-    
+public class Connected_comp_DFS {
      static class Edge {
         int src;
         int dest;
@@ -41,8 +40,22 @@ public class DFS {
 
         graph[6].add(new Edge(6, 5, 1));
     }
+    
+    public static void DFS(ArrayList<Edge> graph[]) {
+    boolean visited[] = new boolean[graph.length];
+    int count = 0;
 
-    public static void Depth_FS(ArrayList<Edge> graph[],int curr,boolean visited[]){ // O(V+E)
+    for (int i = 0; i < graph.length; i++) {
+        if (!visited[i]) {
+            System.out.print("Component " + (count + 1) + ": ");
+            Depth_FS_Util(graph, i, visited);
+            System.out.println();
+            count++;
+        }
+    }
+}
+
+    public static void Depth_FS_Util(ArrayList<Edge> graph[],int curr,boolean visited[]){ // O(V+E)
         // visit
         System.out.print(curr+" "); 
         
@@ -51,15 +64,15 @@ public class DFS {
         for(int i=0;i<graph[curr].size();i++){
             Edge e = graph[curr].get(i);
             if(!visited[e.dest]){
-                Depth_FS(graph, e.dest, visited); 
+                Depth_FS_Util(graph, e.dest, visited); 
             }
         }
-
     }
+
     public static void main(String[] args) {
         int V = 7;
         ArrayList<Edge>[] graph = new ArrayList[V];
         CreateGraph(graph);
-        Depth_FS(graph, 0, new boolean[V]);
+        DFS(graph);
     }
 }
