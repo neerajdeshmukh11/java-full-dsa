@@ -67,7 +67,7 @@ public class bipartite_Graph {
         return true;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { //if graph doesnt have cycles then its a bipartite graph by default
         int V = 5;
         ArrayList<Edge>[] graph = new ArrayList[V];
         CreateGraph(graph);

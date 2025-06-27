@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class cycleDetection_DFS {
+public class cycleDetection_Undire_graph_DFS {
 
     static class Edge {
         int src;
