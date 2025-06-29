@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class Topological_Sort {
+public class Topological_Sort_DFS {
 
     static class Edge {
         int src;
