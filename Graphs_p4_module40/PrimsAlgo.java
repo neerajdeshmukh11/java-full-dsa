@@ -48,7 +48,7 @@ public class PrimsAlgo {
         graph[3].add(new Edge(3, 2, 50));
 
     }
-
+    // TC = O(ElogE)
     public static void Prims(ArrayList<Edge> graph[]){
         boolean visited[] = new boolean[graph.length];
         PriorityQueue<pair> pq = new PriorityQueue<>();
