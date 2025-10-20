@@ -52,7 +52,6 @@ public class Knapsack0_1 {
          
         for(int i=0;i<dp.length;i++){ // 0th col 
             dp[i][0] = 0;
-
         }
         for(int j=0;j<dp[0].length;j++){ // 0th row
             dp[0][j] = 0;
