@@ -15,7 +15,7 @@ public class info5 {
         int jobsInfo[][] = {{4,20},
                             {1,10},
                             {1,40},
-                            {1,30}
+                            {1,30}  
                         };
 
         ArrayList<Job> jobs = new ArrayList<>();

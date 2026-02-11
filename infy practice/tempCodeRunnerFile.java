@@ -1,0 +1,1 @@
+int nextDigit = inNumber.charAt(1);
